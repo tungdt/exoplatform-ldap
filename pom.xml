@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>org.exoplatform</groupId>
+    <artifactId>exo.parent</artifactId>
+    <version>8.1</version>
+    <relativePath/>
+  </parent>
+  <groupId>com.exoplatform.ldap</groupId>
+  <artifactId>platform-ldap</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  <name>eXo Platform LDAP extension</name>
+
+  <scm>
+    <connection>scm:git:git://github.com/tungdt/exoplatform-ldap.git</connection>
+    <developerConnection>scm:git:git@github.com:tungdt/exoplatform-ldap.git</developerConnection>
+  </scm>
+
+  <properties>
+    <org.exoplatform.kernel.version>2.3.9-GA-SNAPSHOT</org.exoplatform.kernel.version>
+    <org.exoplatform.portal.version>3.2.6-PLF-SNAPSHOT</org.exoplatform.portal.version>
+  </properties>
+  <!-- ALL DEPENDENCIES VERSIONS ARE DEFINED IN PARENT POM -->
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>org.exoplatform.portal</groupId>
+        <artifactId>exo.portal.webui.portal</artifactId>
+        <version>${org.exoplatform.portal.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.exoplatform.kernel</groupId>
+        <artifactId>exo.kernel.container</artifactId>
+        <version>${org.exoplatform.kernel.version}</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+  <!-- MODULES -->
+  <modules>
+    <module>platform-ldap-config</module>
+    <module>platform-ldap-component</module>
+    <module>platform-ldap-extension</module>
+  </modules>
+  
+</project>

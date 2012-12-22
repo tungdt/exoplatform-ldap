@@ -1,0 +1,27 @@
+How to deploy the resource to connect Platform with LDAP in read-only mode:
+1) Copy platform-ldap-component-1.0-SNAPSHOT.jar and platform-ldap-config-1.0-SNAPSHOT.jar then paste in $Platform-Tomcat/lib/
+2) Copy platform-ldap-extension.war then paste in $Platform-Tomcat/webapps/
+3) Config LDAP connection
+We assume that an OpenLDAP server is installed and available with the connections details:
+
+rootDN: dc=exoplatform,dc=org
+admin user: cn=manager,dc=exoplatform,dc=org
+admin password: secret
+host: localhost
+port: 389
+
+We also assume that users data are available and stored in
+ctxDNs : ou=users,ou=portal,dc=exoplatform,dc=org
+
+We add configurations into file $Platform-Tomcat/gatein/conf/configuration.properties as below:
+#LDAP parameter
+#set ldap.read.only.mode=false if you want connect Intranet with LDAP in Read-Write mode
+ldap.read.only.mode=true
+ldap.providerURL=ldap://localhost:389
+ldap.adminDN=cn=manager,dc=exoplatform,dc=org
+ldap.adminPassword=secret
+ldap.ctxDNs=ou=users,ou=portal,dc=exoplatform,dc=org
+
+4) Start Tomcat server, then login by LDAP accounts
+
+
