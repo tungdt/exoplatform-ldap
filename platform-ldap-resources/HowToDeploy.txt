@@ -24,4 +24,9 @@ ldap.ctxDNs=ou=users,ou=portal,dc=exoplatform,dc=org
 
 4) Start Tomcat server, then login by LDAP accounts
 
+NOTE:
+* The source-code of platform-ldap-component-1.0-SNAPSHOT.jar is in https://github.com/tungdt/exoplatform-ldap/tree/master/platform-ldap-component
+* The source-code of platform-ldap-config-1.0-SNAPSHOT.jar is in https://github.com/tungdt/exoplatform-ldap/tree/master/platform-ldap-config
+* The source-code of platform-ldap-extension.war is in https://github.com/tungdt/exoplatform-ldap/tree/master/platform-ldap-extension
+
 
